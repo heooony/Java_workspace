@@ -1,0 +1,13 @@
+package animal;
+
+public class MainApp {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void test(Animal animal) {
+		animal.sound();
+		animal.eat();
+		animal.run();
+	}
+}

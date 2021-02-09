@@ -1,0 +1,16 @@
+package cleaning;
+
+import java.util.Scanner;
+
+public class Clean {
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.print("청소할 학생 수 > ");
+		int pickNum = scanner.nextInt();
+		Student student = new Student(pickNum);
+		student.getStudent();
+		student.print();
+	}
+}

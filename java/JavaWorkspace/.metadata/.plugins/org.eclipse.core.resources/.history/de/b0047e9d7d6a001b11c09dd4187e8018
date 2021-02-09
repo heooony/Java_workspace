@@ -1,0 +1,21 @@
+package ex0209;
+
+import java.util.Scanner;
+
+public class ExceptionExam {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int a = s.nextInt();
+		try {
+			System.out.println("---메인 시작---");
+			
+			System.out.println("param값: " + a);
+			
+			//int convertNo = Integer.parseInt(a);
+			System.out.println("형변환 : " );
+		} catch (NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		System.out.println("---메인 끝---");
+	}
+}

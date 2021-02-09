@@ -1,0 +1,31 @@
+package test.exam;
+
+public class Tv extends Elec implements ElecFunction{
+	private int channel;
+	
+	Tv() {}
+	Tv(int channel) {}
+	Tv(String code, int cost, int channel) {}
+	
+	@Override
+	public void start() {
+		System.out.println(getCode() + "제품 TV를" + channel + "을 본다.");
+		
+	}
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public String toString() {
+		return null;
+	}
+	
+}

@@ -1,0 +1,25 @@
+package cleaning;
+
+import java.util.Scanner;
+
+public class Clean {
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.print("청소할 학생 수 > ");
+		int pickNum = scanner.nextInt();
+		Student student = new Student(pickNum);
+		student.getStudent();
+		student.print();
+		while(true) {
+			System.out.print("바꿔줄 학생의 순서번호 (0: 종료) > ");
+			pickNum = scanner.nextInt();
+			if(pickNum == 0)
+				break;
+			student.reset(pickNum);
+			student.print();
+		}
+
+	}
+}

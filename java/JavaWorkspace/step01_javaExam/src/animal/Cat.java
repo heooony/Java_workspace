@@ -1,0 +1,30 @@
+package animal;
+
+public class Cat extends Animal {
+	private int legs;
+	public Cat() {
+		
+	}
+	public Cat(String name, String bodyColor, int legs) {
+		super(name, bodyColor);
+		this.legs = legs;
+	}
+	
+
+	@Override
+	public void sound() {
+		System.out.println("CatÀÇ sound ¾ß~¿Ë~");
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("CatÀÌ ¸Ô´Â´Ù.");
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString() + legs);
+		return sb.toString();
+	}
+
+}

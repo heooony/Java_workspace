@@ -1,0 +1,21 @@
+package cleaning;
+
+public class Student {
+	static String name [];
+	static int length;
+
+	Student() {}
+	Student(int total) {
+		name = new String[]
+				{
+					"김동헌", "김동현", "김민섭", "김성희", "김소영",
+					"김승원", "김승환", "김정희", "박기현", "박성종",
+					"배은진", "서정우", "심기훈", "오동소", "우수현",
+					"이승현", "조민주", "차영우", "최수빈", "최은철",
+					"최정남", "최훈석", "황보현"
+				};
+		length = name.length;
+	}
+	
+	
+}

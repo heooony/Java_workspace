@@ -1,0 +1,27 @@
+package cleaning;
+
+import java.util.Scanner;
+
+public class Clean {
+	static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Student student = new Student();
+		FileService.fileOpen();
+		
+		System.out.print("청소할 학생 수 > ");
+		int pickNum = scanner.nextInt();
+		
+		if(Student.studentLength - Student.previousStudentLength < pickNum) 
+		{
+			System.out.println("이전 청소한 학생 수 보다 많이 선택하셨습니다.");
+			return;
+		}
+		StudentService studentService = new StudentService(pickNum);
+		
+		studentService.getStudent();
+		String pick[] = studentService.getPickedStudent();
+		EndView.print(pick);
+		FileService.fileClose(pick);
+	}
+}

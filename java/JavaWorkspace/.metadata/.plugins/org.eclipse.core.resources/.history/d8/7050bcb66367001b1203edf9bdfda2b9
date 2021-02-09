@@ -1,0 +1,22 @@
+package ex0205;
+
+class testClass{
+	private int num;
+	testClass() {
+		num = 3;
+	}
+	testClass(int num) {
+		this.num = num;
+	}
+	@Override
+	public String toString() {
+		return Integer.toString(num);
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		testClass c = new testClass(10);
+		System.out.println(c);
+	}
+}

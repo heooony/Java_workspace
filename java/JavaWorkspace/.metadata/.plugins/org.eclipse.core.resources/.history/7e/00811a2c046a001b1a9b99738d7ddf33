@@ -1,0 +1,18 @@
+package exercise08_interface;
+
+interface ActionExample {
+	void work();
+}
+
+public class ActionExample {
+	public static void main(String[] args) {
+		ActionExample action = new ActionExample() {
+			@Override
+			public void work() {
+				System.out.println("복사를 합니다.");
+			}
+		};
+		
+		action.work();
+	}
+}

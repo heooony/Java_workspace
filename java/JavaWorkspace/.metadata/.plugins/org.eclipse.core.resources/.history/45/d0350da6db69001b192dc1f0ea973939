@@ -1,0 +1,16 @@
+package board;
+
+public interface BoardInterface {
+	/**
+	 * 등록
+	 */
+	boolean insert(BoardVo board);
+	/**
+	 * 수정
+	 */
+	boolean update(BoardVo board);
+	/**
+	 * 글번호헤 햐당하는 정보 검색
+	 */
+	BoardVo selectByNo(int no);
+}

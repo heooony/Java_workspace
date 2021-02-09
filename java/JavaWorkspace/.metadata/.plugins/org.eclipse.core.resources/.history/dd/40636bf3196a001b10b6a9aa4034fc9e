@@ -1,0 +1,24 @@
+package cleaning;
+
+public class Student {
+	static String student [];
+	static String previousStudent [];
+	static int length;
+
+	Student() {}
+	Student(int total) {
+		student = new String[]
+				{
+					"±èµ¿Çå", "±èµ¿Çö", "±è¹Î¼·", "±è¼ºÈñ", "±è¼Ò¿µ",
+					"±è½Â¿ø", "±è½ÂÈ¯", "±èÁ¤Èñ", "¹Ú±âÇö", "¹Ú¼ºÁ¾",
+					"¹èÀºÁø", "¼­Á¤¿ì", "½É±âÈÆ", "¿Àµ¿¼Ò", "¿ì¼öÇö",
+					"ÀÌ½ÂÇö", "Á¶¹ÎÁÖ", "Â÷¿µ¿ì", "ÃÖ¼öºó", "ÃÖÀºÃ¶",
+					"ÃÖÁ¤³²", "ÃÖÈÆ¼®", "È²º¸Çö"
+				};
+		length = student.length;
+		previousStudent = new String[length];
+		FileService.fileOpen();
+	}
+	
+	
+}

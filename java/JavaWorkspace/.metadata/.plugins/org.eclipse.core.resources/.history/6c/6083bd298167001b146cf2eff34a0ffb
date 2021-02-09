@@ -1,0 +1,17 @@
+package animal;
+
+public class Pig extends Animal {
+
+	@Override
+	public void sound() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

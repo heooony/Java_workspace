@@ -1,0 +1,5 @@
+package exercise08_interface;
+
+interface ActionExample {
+	void work();
+}

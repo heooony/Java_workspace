@@ -1,0 +1,59 @@
+package cleaning;
+
+public class Pick {
+	private String pickedName [];
+	private int pickedNum [];
+	private int total;
+	private int count;
+	
+	Pick() {}
+	Pick() {
+		this.total = total;
+		count = 0;
+		pickedName = new String[total];
+		pickedNum = new int[total];
+	}
+	
+	public void getStudent() {
+		for(int i = 0; i < total; i++) {
+			
+			int randNum = 0;
+			randNum = (int)(Math.random() * name.length);
+			if(!isDuplicate(randNum)) {
+				i--;
+				continue;
+			}
+			
+			pickedName[i] = name[randNum];
+			pickedNum[count] = randNum;
+			count++;
+		}
+	}
+	
+	public boolean isDuplicate(int randNum) {
+		for(int i = 0; i < pickedNum.length; i++) {
+			if(randNum == pickedNum[i]) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public void print() {
+		for(int i = 0; i < total; i++)
+			System.out.print(pickedName[i] + "ดิ, ");
+		System.out.println();
+	}
+	
+	public void reset(int num) {
+		int randNum = 0;
+		while(true) {
+			randNum = (int)(Math.random() * name.length);
+			if(isDuplicate(randNum)) {
+				pickedName[num - 1] = name[randNum];
+				break;
+			}
+		}
+	}
+}

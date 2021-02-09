@@ -1,0 +1,5 @@
+package test.exam;
+
+public interface ElecFunction {
+
+}

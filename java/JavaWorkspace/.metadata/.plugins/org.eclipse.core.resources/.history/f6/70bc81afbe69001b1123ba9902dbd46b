@@ -1,0 +1,31 @@
+package test.exam;
+
+public class Audio extends Elec implements ElecFunction{
+	private int volumn;
+	
+	Audio() {}
+	Audio(int volumn) {}
+	
+	Audio(String code, int cost, int volumn) {}
+	@Override
+	public void start() {
+		System.out.println(getCode() + "의 Audio를" + volumn + "으로 듣는다.");
+		A05의 Audio를 100으로 듣는다.
+	}
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public String toString() {
+		return null;
+	}
+	
+}

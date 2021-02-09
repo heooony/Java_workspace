@@ -1,0 +1,70 @@
+package cleaning;
+
+public class Student {
+	private String name [];
+	private String pickedName [];
+	private int pickedNum [];
+	private int total;
+	private int count;
+	
+	Student() {
+
+	}
+	Student(int total) {
+		name = new String[]
+				{
+					"±èµ¿Çå", "±èµ¿Çö", "±è¹Î¼·", "±è¼ºÈñ", "±è¼Ò¿µ",
+					"±è½Â¿ø", "±è½ÂÈ¯", "±èÁ¤Èñ", "¹Ú±âÇö", "¹Ú¼ºÁ¾",
+					"¹èÀºÁø", "¼­Á¤¿ì", "½É±âÈÆ", "¿Àµ¿¼Ò", "¿ì¼öÇö",
+					"ÀÌ½ÂÇö", "Á¶¹ÎÁÖ", "Â÷¿µ¿ì", "ÃÖ¼öºó", "ÃÖÀºÃ¶",
+					"ÃÖÁ¤³²", "ÃÖÈÆ¼®", "È²º¸Çö"
+				};
+		this.total = total;
+		count = 0;
+		pickedName = new String[total];
+		pickedNum = new int[total];
+	}
+	
+	public void getStudent() {
+		for(int i = 0; i < total; i++) {
+			
+			int randNum = 0;
+			randNum = (int)(Math.random() * name.length);
+			if(!isDuplicate(randNum)) {
+				i--;
+				continue;
+			}
+			
+			pickedName[i] = name[randNum];
+			pickedNum[count] = randNum;
+			count++;
+		}
+	}
+	
+	public boolean isDuplicate(int randNum) {
+		for(int i = 0; i < pickedNum.length; i++) {
+			if(randNum == pickedNum[i]) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public void print() {
+		for(int i = 0; i < total; i++)
+			System.out.print(pickedName[i] + "´Ô, ");
+		System.out.println();
+	}
+	
+	public void reset(int num) {
+		int randNum = 0;
+		while(true) {
+			randNum = (int)(Math.random() * name.length);
+			if(isDuplicate(randNum)) {
+				pickedName[num - 1] = name[randNum];
+				break;
+			}
+		}
+	}
+}

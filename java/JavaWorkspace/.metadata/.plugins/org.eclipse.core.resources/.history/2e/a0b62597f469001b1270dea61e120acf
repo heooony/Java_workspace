@@ -1,0 +1,5 @@
+package driver_example;
+
+public interface Vehicle {
+
+}
